@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button {
+  cursor: pointer;
+}
+
+.menu-button {
+  background-color: #1f2937;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.menu-button:hover {
+  background-color: #374151;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  background-color: #1f1f1f;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #00b0ff;
+  box-shadow: 0 0 0 2px rgba(0, 176, 255, 0.3);
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+th {
+  background-color: #1f1f1f;
+  color: #ccc;
+}
+
+td {
+  border-bottom: 1px solid #2c2c2c;
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr !important;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.text-red-500 {
+  color: #f87171;
 }
